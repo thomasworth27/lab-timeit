@@ -140,9 +140,9 @@ Complete the following table with actual measured runtimes by substituting the v
 
 |                        | `xs=("1"*65536)` | `xs=([1]*65536)` | `xs=deque([1]*65536)` |
 | ---------------------- | ---------------- | ---------------- | --------------------- |
-| `check_palindrome_1`   |                  |                  |                       |
-| `check_palindrome_2`   |                  |                  |                       |
-| `check_palindrome_3`   |       --         |                  |                       |
+| `check_palindrome_1`   | 3.93 msec        |  3.32 msec       |  55.3 msec            |
+| `check_palindrome_2`   | 1.84 msec        |  1.8 msec        |  1.86 msec            |
+| `check_palindrome_3`   |       --         |  128 msec        |  2.44 msec            |
 
 You should observe that the slow runtimes here correspond with the $O(n^2)$ asymptotic runtimes,
 and the fast runtimes correspond with the $O(n)$ runtimes.
@@ -172,10 +172,10 @@ Complete the table by modifying the `N` and `CONTAINER` variables in the shell c
 
 |                        | `CONTAINER=list` | `CONTAINER=deque`     |
 | ---------------------- | ---------------- | --------------------- |
-| `N=16`                 |                  |                       |
-| `N=17`                 |                  |                       |
-| `N=18`                 |                  |                       |
-| `N=19`                 |                  |                       |
+| `N=16`                 | 128 msec         | 2.48 msec             |
+| `N=17`                 | 558 msec         | 4.91 msec             |
+| `N=18`                 | 3.98 sec         | 9.79 msec             |
+| `N=19`                 | 19.2 sec         | 19.6 msec             |
 
 You should observe that the quadratic algorithm/container combination gets *really* slow *really* fast.
 The takeaway: **$O(n^2)$ is bad**.
