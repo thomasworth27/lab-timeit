@@ -86,9 +86,9 @@ Write the runtimes in terms of `n=len(container)` using big-O notation.
 
 |                        | `str`  | `list` | `deque` |
 | ---------------------- | ------ | ------ | ------- |
-| `check_palindrome_1`   | $O(n)$ |        |         |
-| `check_palindrome_2`   |        |        |         |
-| `check_palindrome_3`   |   --   |        |         |
+| `check_palindrome_1`   | $O(n)$ | $O(n)$ | $O(n^2)$ |
+| `check_palindrome_2`   | $O(n)$ | $O(n)$ | $O(n)$ |
+| `check_palindrome_3`   |   --   | $O(n^2)$ | $O(n)$ |
 
 > **NOTE**:
 > The `str` type is *immutable* and so does not support being modified.
